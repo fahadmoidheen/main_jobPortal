@@ -1,0 +1,43 @@
+<div class="container-fluid">
+    
+            
+         
+            
+    <div class='card'>
+        <form (ngSubmit)="updatealumni()" > 
+    <div class='card-body'>            
+      <div class='table-responsive'>
+        <table class='table'>       
+        
+          <tbody>  
+               
+                <tr>
+                    <td><label>Alumni Name</label></td>
+                    <td><input type="text" name="p_name" [(ngModel)]="alumnidataa.uname"/></td>                  
+                  </tr>   
+                  <tr>
+                    <td><label>City</label></td>
+                    <td><input type="text" name="p_date" [(ngModel)]="alumnidataa.city"/></td>                  
+                  </tr>  
+                  <tr>
+                    <td><label>Highest qualification</label></td>
+                    <td><input type="text" name="p_desc" [(ngModel)]="alumnidataa.hq"/></td>                  
+                  </tr>  
+                  
+                  <tr>
+                    <td></td>
+                    <td><input type="submit" value="save" /></td>                  
+                  </tr>             
+          </tbody>
+        </table>
+      </div>
+    </div>
+    </form>
+    </div>
+
+
+
+
+
+</div>
+

@@ -1,0 +1,116 @@
+<div class="example-large-box mat-elevation-z4">
+    <div class="login-wrapper" fxLayout="row" fxLayoutAlign="center center">
+    <mat-card class="box">
+        <mat-card-header>
+          <mat-card-title>POST JOB</mat-card-title>
+        </mat-card-header>
+
+        <form [formGroup]="jobForm" (ngSubmit)="jobPostForm()" class="example-form">
+                 
+           
+
+            <mat-form-field class="example-full-width">
+              <input formControlName="cname" matInput placeholder="Company Name">
+    
+              <mat-error class="error-text" *ngIf="signupFormControl.cname.errors?.required">Company name is required</mat-error>
+    
+    
+    
+            </mat-form-field>
+    
+            <mat-form-field class="example-full-width">
+              <input formControlName="email" matInput placeholder="Email">
+    
+              <mat-error class="error-text" *ngIf="signupFormControl.email.errors?.required">Email is required</mat-error>
+              <mat-error class="error-text" *ngIf="signupFormControl.email.errors?.pattern"> Email format Error
+              </mat-error>
+    
+            </mat-form-field>
+    
+            <mat-form-field class="example-full-width">
+              <input formControlName="jobrole" matInput placeholder="Job Role">
+    
+              <mat-error class="error-text" *ngIf="signupFormControl.jobrole.errors?.required">Phone No. is required
+              </mat-error>
+            </mat-form-field>
+
+            <mat-form-field class="example-full-width">
+                <input formControlName="jobdesc" matInput placeholder="Job Description.....">
+      
+                <mat-error class="error-text" *ngIf="signupFormControl.jobdesc.errors?.required">Job Description is
+                  required</mat-error>
+      
+      
+              </mat-form-field>
+            <mat-form-field class="example-full-width">
+              <input formControlName="hq" matInput placeholder="Highest qualification">
+    
+              <mat-error class="error-text" *ngIf="signupFormControl.hq.errors?.required">Qualification is required
+              </mat-error>
+    
+    
+            </mat-form-field>
+
+
+            <mat-form-field class="example-full-width">
+              <input formControlName="skill" matInput placeholder=" Skills like Node.js,Angular......">
+    
+              <mat-error class="error-text" *ngIf="signupFormControl.skill.errors?.required">Skills field is empty
+              </mat-error>
+    
+    
+            </mat-form-field>
+
+
+            <mat-form-field class="example-full-width">
+              <input formControlName="experience" matInput placeholder="Years of Experience">
+    
+              <mat-error class="error-text" *ngIf="signupFormControl.experience.errors?.required">Years of Experience is
+                required</mat-error>
+    
+    
+            </mat-form-field>
+
+            
+            <mat-form-field class="example-full-width">
+              <input formControlName="jobtype" matInput placeholder="Internship or Full Time or Part Time">
+    
+              <mat-error class="error-text" *ngIf="signupFormControl.jobtype.errors?.required">Job Type is
+                required</mat-error>
+    
+    
+            </mat-form-field>
+
+
+            <mat-form-field class="example-full-width">
+              <input formControlName="lastdate" type="date" matInput placeholder=" ">
+    
+              <mat-error class="error-text" *ngIf="signupFormControl.lastdate.errors?.required">
+                Required</mat-error>
+    
+    
+            </mat-form-field>
+
+
+           
+          
+         
+           
+    
+    
+            <button [disabled]=jobForm.invalid mat-stroked-button color="accent" type="submit"
+              class="btn-block ">Add Job</button>
+    
+          </form>
+            
+    </mat-card>
+
+   
+  
+ </div>
+
+ 
+</div>
+
+    
+

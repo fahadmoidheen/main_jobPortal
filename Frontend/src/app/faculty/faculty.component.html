@@ -1,0 +1,35 @@
+<div class="row">
+  
+    <div class="example-large-box mat-elevation-z4">
+      <div class="login-wrapper" fxLayout="row" fxLayoutAlign="center center">
+    <div class="row"  *ngFor='let faculty of facultydata'  >    
+      <br>
+      <div class="col-md-10 col-sm-9"> 
+      
+        <h3>Name:{{faculty.uname}}</h3>
+        <div class="row">
+          <div class="col-xs-9">
+            <h4><span class="label label-default">email: {{faculty.email}}</span></h4>
+            <h4><span class="label label-default">Skills: {{faculty.skill}}</span></h4>
+            <h4><span class="label label-default">Experience: {{faculty.experience}}</span></h4>
+            
+            <h4> 
+              
+            <small class="text-muted">Qualification: {{faculty.hq}}</small>
+            </h4></div>
+
+            <!-- <a  class="btn btn-primary" *ngIf="_auth.isadmin()"  (click)="editfacultys(faculty)">Update <i  class="glyphicon glyphicon-chevron-right"></i></a>
+             &nbsp;
+            <a  class="btn btn-primary" *ngIf="_auth.isadmin()"  (click)="deletefacultys(faculty)"  >Delete <i class="glyphicon glyphicon-chevron-right"></i></a> -->
+          <div class="col-xs-3"></div>
+        </div>
+        <br><br>
+      </div>
+      
+    </div>
+    
+
+      </div>
+    </div>
+
+</div>

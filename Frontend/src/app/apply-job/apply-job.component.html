@@ -1,0 +1,87 @@
+<div class="container-fluid">
+  <div class="example-large-box mat-elevation-z4">
+    <div class="login-wrapper" fxLayout="row" fxLayoutAlign="center center">
+      <mat-card class="box">
+        <mat-card-header>
+          <mat-card-title>Apply Job</mat-card-title>
+        </mat-card-header>
+  
+        <form [formGroup]="signupForm" (ngSubmit)="signupUser()" class="example-form">
+  
+  
+          <mat-form-field class="example-full-width">
+            <input formControlName="uname" matInput placeholder="Username">
+  
+            <mat-error class="error-text" *ngIf="signupFormControl.uname.errors?.required">name is required</mat-error>
+  
+  
+  
+          </mat-form-field>
+  
+          <mat-form-field class="example-full-width">
+            <input formControlName="Uemail" matInput placeholder="Email">
+  
+            <mat-error class="error-text" *ngIf="signupFormControl.Uemail.errors?.required">Email is required</mat-error>
+            <mat-error class="error-text" *ngIf="signupFormControl.Uemail.errors?.pattern"> Email format Error
+            </mat-error>
+  
+          </mat-form-field>
+  
+          <mat-form-field class="example-full-width">
+            <input formControlName="phoneno" matInput placeholder="Phone Number">
+  
+            <mat-error class="error-text" *ngIf="signupFormControl.phoneno.errors?.required">Phone No. is required
+            </mat-error>
+            <mat-error class="error-text" *ngIf="signupFormControl.phoneno.errors?.pattern">Format Error </mat-error>
+  
+  
+          </mat-form-field>
+          <mat-form-field class="example-full-width">
+            <input formControlName="hq" matInput placeholder="Highest qualification">
+  
+            <mat-error class="error-text" *ngIf="signupFormControl.hq.errors?.required">Qualification is required
+            </mat-error>
+  
+  
+          </mat-form-field>
+          <mat-form-field class="example-full-width">
+            <input formControlName="skill" matInput placeholder=" Skills like Node.js,Angular......">
+  
+            <mat-error class="error-text" *ngIf="signupFormControl.skill.errors?.required">Skills field is empty
+            </mat-error>
+  
+  
+          </mat-form-field>
+          <mat-form-field class="example-full-width">
+            <input formControlName="experience" matInput placeholder="Years of Experience">
+  
+            <mat-error class="error-text" *ngIf="signupFormControl.experience.errors?.required">Years of Experience is
+              required</mat-error>
+  
+  
+          </mat-form-field>
+  
+  
+           <input type="hidden"   formControlName="Cemail"  >
+           <input type="hidden"   fromControlName="job_id"   >
+           <input type="hidden"   fromControlName="lastdate"  >
+           <input type="hidden"   fromControlName="cname"  >
+           <input type="hidden"   fromControlName="jobrole"  >
+           <input type="hidden"   fromControlName="jobdesc"  >
+           <input type="hidden"   fromControlName="jobtype"  >
+           
+  
+        
+  
+  
+  
+  
+          <button [disabled]=signupForm.invalid mat-stroked-button color="accent" type="submit"
+            class="btn-block">Register</button>
+  
+        </form>
+      </mat-card>
+    </div>
+  </div>
+
+</div>

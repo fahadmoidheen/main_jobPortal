@@ -1,0 +1,70 @@
+<div class="container-fluid" style="height: 900px;">
+
+  <mat-tab-group mat-align-tabs="center">
+    <mat-tab label="Profile"> 
+      <div class="">
+        <app-employer-profile></app-employer-profile>
+      </div>
+  </mat-tab>
+      <mat-tab label="Post Jobs"> 
+          
+          <div class="" style="justify-content: center;">
+              <app-jobpost></app-jobpost>
+              
+          </div>
+      
+      
+      </mat-tab>
+      <mat-tab label="View posted jobs"> 
+          
+          <!-- <div class="example-large-box mat-elevation-z4">
+            <div class="p-2" style="background: #eaeaea; width: 100%; border: white solid;">
+              <div class="">
+                  <h3>Jobs</h3>
+                  <table style="width:100%">
+                    <tr>
+                      <th>Company Name</th>
+                     <th>Job Role</th>
+                     <th>Job Description</th>
+                     <th>Skills</th>
+                     <th>Experience</th>
+                     <th>Job Type</th>
+                     <th>Last Date</th>
+                      <th></th>
+                    </tr>
+                    <tr *ngFor="let job of jobs">
+                      <td>{{job.cname}}</td>
+                      <td>{{job.jobrole}}</td>
+                      <td>{{job.jobdesc}}</td>
+                      <td>{{job.skill}}</td>
+                      <td>{{job.experience}}</td>
+                      <td>{{job.jobtype}}</td>
+                      <td>{{job.lastdate}}</td>
+                      <td>
+                        <button type="button" class="btn" (click)=apply(item)  >Apply</button>
+                        <button type="button" class="btn btn-danger"(click)=view(job) >View  Aplicants</button>
+                        &nbsp;
+                        <button type="button" class="btn btn-danger"(click)=delete(job._id) >DELETE POST</button>
+                     </td>
+                    </tr>
+                    <tr>
+                      
+                    </tr>
+                  </table>
+                  
+                </div>
+          </div>
+          </div> -->
+          
+          <div class="example-large-box mat-elevation-z4">
+            <app-alljobs></app-alljobs>
+          </div>
+      
+      </mat-tab>
+    </mat-tab-group>
+
+
+  
+</div>
+
+

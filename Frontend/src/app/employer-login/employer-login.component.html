@@ -1,0 +1,50 @@
+<div class="container-fluid">
+    <div class="register">
+        <div class="row">
+            <div class="col-md-3 register-left">
+                <img src="https://image.ibb.co/n7oTvU/logo_white.png" alt=""/>
+                <h3>Welcome back</h3>
+                <p>  <b>Are new to here?</b> </p>
+                <!-- <input type="submit" routerLink="login-employee" value="Login" ><br/> -->
+                <button  type="submit" class="btnlogin" value="Login" ><a routerLink="/employer">Sign Up</a></button>
+            </div>
+            <div class="col-md-9 register-right">
+                <ul class="nav nav-tabs nav-justified" id="myTab" role="tablist">
+                    <li class="nav-item">
+                        <a class="nav-link " id="home-tab"  routerLink="/employer" role="tab" aria-controls="home" aria-selected="true">Sign Up</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" id="profile-tab"  routerLink="/empLogin" role="tab" aria-controls="profile" aria-selected="false">Log In</a>
+                    </li>
+                </ul>
+                <div class="tab-content" id="myTabContent">
+                    <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                        <h3 class="register-heading">Log in as a Employee</h3>
+
+                        <form  ngNativeValidate (ngSubmit)="loginEmp()" >
+                            <div class="row register-form">
+                                <div class="col-md-12">
+                                    <div class="form-group">
+                                        <input type="email" class="form-control" #email="ngModel" [(ngModel)]="emp.email" placeholder="Email address *" name="email" required  >
+                                        <label for="error" class="text-danger" *ngIf="email.touched && email.invalid"><small><b>Please provide Email address!!</b></small> </label>
+                                    </div>
+                                    <br>
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" placeholder="Password *" #password="ngModel" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&*_=+-]).{8,12}$" [(ngModel)]="emp.password"  name="password"required  >
+                                        
+                                        <label for="error" class="text-danger" *ngIf="password.touched && password.invalid"><small><b>Must have 1
+                                            Lower case&Uppercase,1 number,1 Symbol and Minimun Length 8</b></small> </label>
+                                    </div>
+                                </div>
+                                <button type="submit"  class="btnRegister"  value="Register" >Submit</button>
+                            </div>  
+                        </form>  
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+    </div>
+    
+</div>
+

@@ -1,0 +1,35 @@
+.container-fluid{
+    background: rgb(1,70,108);
+    background: linear-gradient(90deg, #3931af 3%, rgba(0,212,255,1) 100%);
+    
+}
+mat-tab-group{
+    padding-top: 5%;
+    
+}
+.btn{
+    width: 80px;
+    margin-left: 10px;
+  } 
+.mat-tab-label{
+    color: #ffffff !important; 
+    font-size:1.5em !important;
+}
+
+.example-large-box-faculty{
+    width: 700px;
+}
+
+.example-large-box {
+    
+    align-items: center;
+    
+    margin: 16px;
+    padding: 16px;
+    border-radius: 8px;
+
+}
+
+.links{
+    align-items: center;
+}

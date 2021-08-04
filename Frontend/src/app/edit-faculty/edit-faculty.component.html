@@ -1,0 +1,61 @@
+<div class="container-fluid">
+  <div class="example-large-box mat-elevation-z4">
+    <div class="login-wrapper" fxLayout="row" fxLayoutAlign="center center">
+      <mat-card class="box">
+        <mat-card-header>
+          <mat-card-title>Update Faculty Data</mat-card-title>
+        </mat-card-header>
+    
+        <form (ngSubmit)="editfaculty()" #updateForm="ngForm"    class="example-form">
+    
+          
+            <mat-form-field class="example-full-width">
+              <input #uname="ngModel" required [ngModelOptions]="{standalone: true}" [(ngModel)]="facultydata.uname"  matInput  placeholder="Username">
+              <mat-error class="error-text" *ngIf="uname.errors?.required" >name  is required</mat-error>
+            </mat-form-field>
+           
+            
+            <mat-form-field class="example-full-width">
+              <input  required [ngModelOptions]="{standalone: true}"  [(ngModel)]="facultydata.phoneno" matInput placeholder="Phone Number">
+            
+               
+             
+            </mat-form-field>
+            <mat-form-field class="example-full-width">
+              <input required [ngModelOptions]="{standalone: true}" [(ngModel)]="facultydata.hq" matInput placeholder="Highest qualification">
+              
+            
+            </mat-form-field>
+            <mat-form-field class="example-full-width">
+              <input required [ngModelOptions]="{standalone: true}" [(ngModel)]="facultydata.skill" matInput placeholder=" Skills like Node.js,Angular......">
+              
+               
+            
+            </mat-form-field>
+            <mat-form-field class="example-full-width">
+              <input required [ngModelOptions]="{standalone: true}" formcontrol="experience" [(ngModel)]="facultydata.experience" matInput placeholder="Years of Experience">
+            
+            </mat-form-field> 
+
+            
+                
+               
+            
+          
+           
+            
+           
+         
+          
+    
+          <button [disabled]="updateForm.form.invalid" mat-stroked-button color="accent" type="submit" class="btn-block" >Update</button>
+    
+        </form>
+      </mat-card>
+    </div>
+  </div>
+</div>
+  
+   
+  
+  
